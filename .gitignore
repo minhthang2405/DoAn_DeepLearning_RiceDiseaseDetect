@@ -62,9 +62,9 @@ patch_*.py
 run_patch*.py
 
 # ── 8. LOG & TXT TẠM ──
-!requirements.txt
 *.log
 *.txt
+!requirements.txt
 debug.log
 audit_out*.txt
 layer_info.txt

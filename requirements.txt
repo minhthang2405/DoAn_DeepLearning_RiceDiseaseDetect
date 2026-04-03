@@ -1,0 +1,12 @@
+# ============================================
+# Rice Leaf Disease Classification
+# Train on Kaggle GPU T4×2 (pre-installed)
+# Local scripts only need these packages:
+# ============================================
+tensorflow>=2.12
+numpy
+matplotlib
+Pillow
+opencv-python
+python-docx
+scikit-learn
