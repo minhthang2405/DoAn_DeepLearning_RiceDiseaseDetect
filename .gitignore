@@ -1,8 +1,9 @@
 # ============================================================
-# .gitignore — CK2: Rice Disease Classification Project
+# .gitignore — DoAn_DeepLearning_RiceDiseaseDetect
+# Chỉ giữ: ipynb chính, gradcam_visualize.py, README, hình output
 # ============================================================
 
-# ── 1. MODEL FILES (quá nặng: 400MB+, dùng Git LFS hoặc link riêng) ──
+# ── 1. MODEL FILES (quá nặng) ──
 model/
 *.keras
 *.h5
@@ -12,7 +13,7 @@ model/
 *.pt
 *.pth
 
-# ── 2. DATASET & ẢNH MẪU (không push lên github) ──
+# ── 2. DATASET & SAMPLE IMAGES ──
 sample_images/
 datasets/
 data/
@@ -20,81 +21,70 @@ data/
 *.tar.gz
 *.rar
 
-# ── 3. RESULT IMAGES LỚN ──
-GradCAM_4Models_Compare.png
-GradCAM_EfficientNetV2S.png
-GradCAM_Visualization.png
+# ── 3. SCRIPT SINH FILE (docx, kịch bản, slide, paper) ──
+gen_kich_ban_word.py
+md_to_word.py
+convert_to_docx.py
+generate_paper.py
+generate_paper_15pages.py
+generate_paper_2col.py
+generate_paper_vn.py
+generate_notebook.py
+generate_notebook_gpu.py
+generate_notebook_steps.py
+generate_notebook_tpu.py
 
-# ── 4. LOG FILES ──
+# ── 4. FILE DOCX ĐẦU RA (kịch bản, slide, paper nháp) ──
+*.docx
+*.doc
+
+# ── 5. SLIDE & BÁO CÁO NỘI BỘ (markdown) ──
+slides_*.md
+bao_cao_*.md
+kich_ban_*.md
+kich_ban_*.docx
+
+# ── 6. NOTEBOOK NHÁP / TPU / GPU CŨ ──
+rice_disease_prediction.ipynb
+rice_disease_prediction_gpu_part1.ipynb
+rice_disease_prediction_tpu.ipynb
+
+# ── 7. SCRIPT FIX / PATCH TẠM THỜI ──
+fix_*.py
+find_imshow.py
+audit_temp.py
+verify_*.py
+patch_*.py
+run_patch*.py
+
+# ── 8. LOG & TXT TẠM ──
 *.log
 *.txt
-audit_out.txt
-audit_out2.txt
-audit_output.txt
+debug.log
+audit_out*.txt
 layer_info.txt
-kaggle_files.txt
-kaggle_files2.txt
+kaggle_files*.txt
 template_inspect.txt
 
-# ── 5. PYTHON CACHE ──
+# ── 9. PYTHON CACHE ──
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 .Python
 *.egg-info/
 
-# ── 6. JUPYTER CHECKPOINTS ──
+# ── 10. JUPYTER CHECKPOINTS ──
 .ipynb_checkpoints/
 _cells/
 
-# ── 7. FILE FIX / PATCH TẠM THỜI (không cần thiết) ──
-fix_imshow_uint8.py
-fix_layout_and_classweight.py
-fix_step10.py
-fix_step10_preprocess.py
-fix_step51.py
-fix_step53.py
-fix_step53_preprocess.py
-find_imshow.py
-audit_temp.py
-verify_patch.py
-verify_preprocessing_logic.py
-patch_step10_load.py
-run_patch_algorithm.py
-
-# ── 8. WORD DOCS TRUNG GIAN / NHÁP ──
-ATiGb2026-extended-abstract-template.docx
-BaoCao_BenhLaLua_IEEE_15pages.docx
-BaoCao_BenhLaLua_IEEE_2col.docx
-conference-template-a4.docx
-test_cols.docx
-bai_bao_benh_la_lua_IEEE.docx
-rice_disease_paper_IEEE.docx
-kich_ban_thuyet_trinh.docx
-Kich_Ban_Thuyet_Trinh_Sieu_Chi_Tiet_V4.docx
-slides_part1_steps1to5.docx
-slides_part2_steps6to10.docx
-md_to_word.py
-convert_to_docx.py
-
-# ── 9. SCRIPT GENERATE NOTEBOOK THỪA ──
-generate_notebook.py
-generate_notebook_steps.py
-generate_notebook_tpu.py
-generate_paper.py
-generate_paper_vn.py
-patch_notebook.py
-patch_models_2025.py
-
-# ── 10. IDE / SYSTEM ──
+# ── 11. IDE / SYSTEM ──
 .vscode/
 .atom8n/
 *.code-workspace
 .DS_Store
 Thumbs.db
 
-# ── 11. ENV ──
+# ── 12. ENV ──
 .env
 venv/
 .venv/
