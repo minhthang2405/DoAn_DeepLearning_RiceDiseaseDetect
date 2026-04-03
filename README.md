@@ -123,3 +123,25 @@ python gen_kich_ban_word.py
 - File model `.keras` (~400MB) **không được commit** lên GitHub (xem `.gitignore`).
 - Dataset **không được commit** — tải từ Kaggle hoặc liên hệ nhóm.
 - Ảnh GAN sinh ra chỉ dùng cho tập **Train**, tuyệt đối không dùng cho Val/Test.
+
+---
+
+## 📦 Dataset (Kaggle)
+
+Dự án sử dụng **4 bộ dataset** gộp lại từ Kaggle. Tải về và đặt vào thư mục `datasets/`:
+
+| # | Dataset | Link |
+|---|---------|------|
+| 1 | Rice Disease (thaonguyen0712) | [🔗 Tải về](https://www.kaggle.com/datasets/thaonguyen0712/rice-disease) |
+| 2 | Rice Disease (nurnob101) | [🔗 Tải về](https://www.kaggle.com/datasets/nurnob101/rice-disease) |
+| 3 | Rice Disease (jonathanrjpereira) | [🔗 Tải về](https://www.kaggle.com/datasets/jonathanrjpereira/rice-disease) |
+| 4 | Rice Disease Dataset (anshulm257) | [🔗 Tải về](https://www.kaggle.com/datasets/anshulm257/rice-disease-dataset) |
+
+> 💡 **Tải nhanh bằng Kaggle CLI:**
+> ```bash
+> pip install kaggle
+> kaggle datasets download thaonguyen0712/rice-disease -p datasets/
+> kaggle datasets download nurnob101/rice-disease -p datasets/
+> kaggle datasets download jonathanrjpereira/rice-disease -p datasets/
+> kaggle datasets download anshulm257/rice-disease-dataset -p datasets/
+> ```
