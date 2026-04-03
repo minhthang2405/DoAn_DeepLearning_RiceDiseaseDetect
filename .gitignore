@@ -1,7 +1,11 @@
 # ============================================================
 # .gitignore — DoAn_DeepLearning_RiceDiseaseDetect
-# Chỉ giữ: ipynb chính, gradcam_visualize.py, README, hình output
+# Chỉ giữ: notebook chính (t4x2), README, results/
 # ============================================================
+
+# ── 0. SCRIPT & NOTEBOOK PHỤ ──
+gradcam_visualize.py
+rice_disease_10steps.ipynb
 
 # ── 1. MODEL FILES (quá nặng) ──
 model/
