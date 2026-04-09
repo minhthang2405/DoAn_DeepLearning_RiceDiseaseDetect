@@ -1,4 +1,4 @@
-# 🌾 Rice Leaf Disease Prediction — Advanced Deep Learning Pipeline
+#  Rice Leaf Disease Prediction — Advanced Deep Learning Pipeline
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12+-orange.svg)](https://www.tensorflow.org/)
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project implements an automated, highly accurate classification system for **7 types of rice leaf diseases** from field images. It utilizes a comprehensive 10-step deep learning pipeline, integrating state-of-the-art Computer Vision models, advanced data augmentation techniques, and custom attention mechanisms (CBAM/SE-Blocks), optimized for distributed training on Kaggle's **Dual GPU T4×2** architecture.
 
@@ -18,20 +18,20 @@ This project implements an automated, highly accurate classification system for 
 
 ---
 
-## 📦 Datasets
+##  Datasets
 
 The dataset is a consolidated and curated collection merged from **4 different Kaggle datasets**, resulting in over **7,700 high-quality images** after strict MD5 hash deduplication and corruption filtering.
 
 | # | Source Dataset | Link |
 |---|----------------|------|
-| 1 | Rice Disease (thaonguyen0712) | [🔗 Kaggle](https://www.kaggle.com/datasets/thaonguyen0712/rice-disease) |
-| 2 | Rice Disease (nurnob101) | [🔗 Kaggle](https://www.kaggle.com/datasets/nurnob101/rice-disease) |
-| 3 | Rice Disease (jonathanrjpereira) | [🔗 Kaggle](https://www.kaggle.com/datasets/jonathanrjpereira/rice-disease) |
-| 4 | Rice Disease Dataset (anshulm257) | [🔗 Kaggle](https://www.kaggle.com/datasets/anshulm257/rice-disease-dataset) |
+| 1 | Rice Disease (thaonguyen0712) | [ Kaggle](https://www.kaggle.com/datasets/thaonguyen0712/rice-disease) |
+| 2 | Rice Disease (nurnob101) | [ Kaggle](https://www.kaggle.com/datasets/nurnob101/rice-disease) |
+| 3 | Rice Disease (jonathanrjpereira) | [ Kaggle](https://www.kaggle.com/datasets/jonathanrjpereira/rice-disease) |
+| 4 | Rice Disease Dataset (anshulm257) | [ Kaggle](https://www.kaggle.com/datasets/anshulm257/rice-disease-dataset) |
 
 ---
 
-## 📜 10-Step Deep Learning Pipeline
+##  10-Step Deep Learning Pipeline
 
 We have designed a professional-grade notebook pipeline capable of running seamlessly on Kaggle:
 
@@ -48,7 +48,7 @@ We have designed a professional-grade notebook pipeline capable of running seaml
 
 ---
 
-## 🤖 Models & Training Strategy
+##  Models & Training Strategy
 
 The project compares multiple architectures against a newly proposed custom model:
 
@@ -57,14 +57,14 @@ The project compares multiple architectures against a newly proposed custom mode
 3. **MobileNetV3Large:** Lightweight, mobile-optimized architecture.
 4. **Proposed Custom Architecture:** Featuring a highly optimized backbone (EfficientNetV2 / ConvNeXt) combined with an **Attention Mechanism (CBAM / SE-Block)** and **Focal Loss (γ=2.0)** to tackle hard-to-classify samples.
 
-### 🏋️ 3-Phase Transfer Learning
+###  3-Phase Transfer Learning
 * **Phase 1 (Warmup):** `LR = 1e-3` — Base model frozen, train standard dense head.
 * **Phase 2 (Partial Unfreeze):** `LR = 1e-4` — Unfreeze the top 30% of layers, apply Cosine Annealing.
 * **Phase 3 (Full Fine-tune):** `LR = 1e-5` — Unfreeze 100% of the model to align weights precisely with the specific domain of rice diseases.
 
 ---
 
-## 📊 Test Set Results
+##  Test Set Results
 
 Our best proposed ensemble/model achieves exceptional performance metrics on the test set, demonstrating robust applicability in real-world agricultural scenarios:
 
@@ -76,18 +76,18 @@ Our best proposed ensemble/model achieves exceptional performance metrics on the
 | **F1-Macro** | **88.3%** | 87.8% | 87.3% | 86.0% |
 | **Kappa** | **0.875** | 0.866 | 0.862 | 0.829 |
 
-> ✅ **Insight:** The integration of the Attention mechanisms (CBAM/SE) significantly improves differentiation between visually similar disease states (like *Hispa* and *Early Brown Spot*), yielding a Cohen's Kappa score indicating "Almost Perfect Agreement".
+>  **Insight:** The integration of the Attention mechanisms (CBAM/SE) significantly improves differentiation between visually similar disease states (like *Hispa* and *Early Brown Spot*), yielding a Cohen's Kappa score indicating "Almost Perfect Agreement".
 
 ---
 
-## 🔬 Visual Explainability (Grad-CAM)
+##  Visual Explainability (Grad-CAM)
 
 To build trust in the AI's diagnostic decisions, we leverage **Grad-CAM** (Gradient-weighted Class Activation Mapping). 
 The model demonstrates exactly *where* it is looking when diagnosing a disease. For instance, the activation heatmaps successfully localize the distinctive elongated lesions of Bacterial Leaf Blight and the diamond-shaped necrotic patches of Leaf Blast. 
 
 ---
 
-## 🛠️ Quick Start & Setup
+##  Quick Start & Setup
 
 **Requirements:**
 - Python 3.9+
@@ -103,13 +103,13 @@ The model demonstrates exactly *where* it is looking when diagnosing a disease. 
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
-├── 📓 rice_disease_prediction_t4x2.ipynb   ← Main training pipeline notebook (GPU T4x2)
-├── 📊 results/                             ← Saved metrics, charts, & Grad-CAM outputs
-├── 🖼️ sample_images/                       ← Example images for quick inference
-├── 📄 README.md                            ← Project documentation (this file)
-└── 🚫 .gitignore                           ← Ignores model weights (.keras) & raw data
+├──  rice_disease_prediction_t4x2.ipynb   ← Main training pipeline notebook (GPU T4x2)
+├──  results/                             ← Saved metrics, charts, & Grad-CAM outputs
+├──  sample_images/                       ← Example images for quick inference
+├──  README.md                            ← Project documentation (this file)
+└──  .gitignore                           ← Ignores model weights (.keras) & raw data
 ```
 *(Note: Trained `.keras` weights and raw Kaggle datasets are excluded from this repository to save space. They will be generated/downloaded at runtime).*
